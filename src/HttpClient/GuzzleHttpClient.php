@@ -42,17 +42,25 @@ class GuzzleHttpClient implements HttpClientInterface
     /**
      * {@inheritdoc}
      */
-    public function get($url)
+    public function get($url, array $data = [], array $headers = [])
     {
-        return $this->doRequest('POST', $url, [], []);
+        return $this->doRequest('POST', $url, $headers, $data);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function post($url, array $data)
+    public function post($url, array $data, array $headers = null)
     {
         return $this->doRequest('POST', $url, ['Content-Type' => 'application/json; charset=utf-8'], $data);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function delete($url)
+    {
+        return $this->doRequest('DELETE', $url, ['Content-Type' => 'application/json; charset=utf-8']);
     }
 
     /**
