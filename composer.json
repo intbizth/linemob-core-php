@@ -30,7 +30,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:intbizth/linemob-core-php"
+            "url": "git@github.com:intbizth/linemob-core-php.git"
         }
     ],
     "require": {
