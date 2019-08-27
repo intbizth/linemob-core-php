@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4cdfdc8a088d559fbf8e4fbb126443db",
+    "content-hash": "27a34f394d7233f93ca621e979d4520c",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -1325,6 +1325,64 @@
             "time": "2019-08-26T16:46:48+00:00"
         },
         {
+            "name": "symfony/inflector",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/inflector.git",
+                "reference": "c3a425d9f86ab019ec883cdae9167f8f7035e9bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/inflector/zipball/c3a425d9f86ab019ec883cdae9167f8f7035e9bc",
+                "reference": "c3a425d9f86ab019ec883cdae9167f8f7035e9bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.9",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Inflector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Inflector Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "inflection",
+                "pluralize",
+                "singularize",
+                "string",
+                "symfony",
+                "words"
+            ],
+            "time": "2019-08-07T12:07:17+00:00"
+        },
+        {
             "name": "symfony/mime",
             "version": "dev-master",
             "source": {
@@ -1621,37 +1679,105 @@
             "time": "2019-08-06T08:03:45+00:00"
         },
         {
-            "name": "symfony/workflow",
-            "version": "dev-master",
+            "name": "symfony/property-access",
+            "version": "4.4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/workflow.git",
-                "reference": "e9b60ed942d1488999987cb8d5cfe4b5c02569f4"
+                "url": "https://github.com/symfony/property-access.git",
+                "reference": "769704427fd525fd4a084ab6c0a6d55124c89b12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/workflow/zipball/e9b60ed942d1488999987cb8d5cfe4b5c02569f4",
-                "reference": "e9b60ed942d1488999987cb8d5cfe4b5c02569f4",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/769704427fd525fd4a084ab6c0a6d55124c89b12",
+                "reference": "769704427fd525fd4a084ab6c0a6d55124c89b12",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2.9"
-            },
-            "conflict": {
-                "symfony/event-dispatcher": "<4.4"
+                "php": "^7.1.3",
+                "symfony/inflector": "^3.4|^4.0|^5.0"
             },
             "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/dependency-injection": "^4.4|^5.0",
-                "symfony/event-dispatcher": "^4.4|^5.0",
-                "symfony/expression-language": "^4.4|^5.0",
-                "symfony/security-core": "^4.4|^5.0",
-                "symfony/validator": "^4.4|^5.0"
+                "symfony/cache": "^3.4|^4.0|^5.0"
+            },
+            "suggest": {
+                "psr/cache-implementation": "To cache access methods."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "4.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\PropertyAccess\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony PropertyAccess Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "access",
+                "array",
+                "extraction",
+                "index",
+                "injection",
+                "object",
+                "property",
+                "property path",
+                "reflection"
+            ],
+            "time": "2019-08-26T09:00:56+00:00"
+        },
+        {
+            "name": "symfony/workflow",
+            "version": "v4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/workflow.git",
+                "reference": "6164f83111e607dd569aeb071701e1f7ef7fc5d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/workflow/zipball/6164f83111e607dd569aeb071701e1f7ef7fc5d6",
+                "reference": "6164f83111e607dd569aeb071701e1f7ef7fc5d6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/property-access": "~3.4|~4.0"
+            },
+            "conflict": {
+                "symfony/event-dispatcher": "<4.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "^4.3",
+                "symfony/expression-language": "~3.4|~4.0",
+                "symfony/security-core": "~3.4|~4.0",
+                "symfony/validator": "~3.4|~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -1687,7 +1813,7 @@
                 "transition",
                 "workflow"
             ],
-            "time": "2019-08-26T09:05:36+00:00"
+            "time": "2019-05-28T08:29:18+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -3366,7 +3492,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "symfony/workflow": 20,
         "phpspec/phpspec": 20
     },
     "prefer-stable": false,
