@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27a34f394d7233f93ca621e979d4520c",
+    "content-hash": "98741b5c0ab7c13cf5b84c60e3e7af97",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -247,36 +247,44 @@
         },
         {
             "name": "league/tactician-bundle",
-            "version": "v0.4.1",
+            "version": "v1.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/tactician-bundle.git",
-                "reference": "14b38eb1d855fdd805eee2f6c1c20e956534381f"
+                "reference": "3644020c3600113c9bd459b8c1efff9cb2e42d0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/tactician-bundle/zipball/14b38eb1d855fdd805eee2f6c1c20e956534381f",
-                "reference": "14b38eb1d855fdd805eee2f6c1c20e956534381f",
+                "url": "https://api.github.com/repos/thephpleague/tactician-bundle/zipball/3644020c3600113c9bd459b8c1efff9cb2e42d0d",
+                "reference": "3644020c3600113c9bd459b8c1efff9cb2e42d0d",
                 "shasum": ""
             },
             "require": {
                 "league/tactician": "^1.0",
-                "php": ">=5.5",
-                "symfony/config": "^2.3|^3.0",
-                "symfony/dependency-injection": "^2.3|^3.0",
-                "symfony/http-kernel": "^2.3|^3.0",
-                "symfony/yaml": "^2.3|^3.0"
+                "league/tactician-container": "^2.0",
+                "league/tactician-logger": "^0.10.0",
+                "php": ">=7.0",
+                "symfony/config": "^2.8|^3.3|^4.0",
+                "symfony/dependency-injection": "^2.8|^3.3|^4.0",
+                "symfony/http-kernel": "^2.8|^3.3|^4.0",
+                "symfony/yaml": "^2.8|^3.3|^4.0"
             },
             "require-dev": {
-                "league/tactician-doctrine": "^1.0",
-                "matthiasnoback/symfony-config-test": "~1.0",
-                "matthiasnoback/symfony-dependency-injection-test": "^0.7",
-                "mockery/mockery": "~0.9.4",
-                "phpunit/phpunit": "~4.5",
-                "symfony/validator": "^2.3|^3.0"
+                "league/tactician-doctrine": "^1.1.1",
+                "matthiasnoback/symfony-config-test": "^3.0",
+                "matthiasnoback/symfony-dependency-injection-test": "^2.1",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~6.1",
+                "symfony/console": "^2.8|^3.3|^4.0",
+                "symfony/framework-bundle": "^2.8.15|^3.3|^4.0",
+                "symfony/security": "^2.8|^3.3|^4.0",
+                "symfony/security-bundle": "^2.8|^3.3|^4.0",
+                "symfony/validator": "^2.8|^3.3|^4.0"
             },
             "suggest": {
                 "league/tactician-doctrine": "For doctrine transaction middleware",
+                "symfony/console": "For debugging command-to-handler routing using the tactician:debug console command",
+                "symfony/security": "For command security middleware",
                 "symfony/validator": "For command validator middleware"
             },
             "type": "symfony-bundle",
@@ -287,7 +295,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "League\\Tactician\\Bundle\\": ""
+                    "League\\Tactician\\Bundle\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -318,7 +326,106 @@
                 "symfony",
                 "tactician"
             ],
-            "time": "2016-04-21T08:00:01+00:00"
+            "time": "2018-12-16T12:51:57+00:00"
+        },
+        {
+            "name": "league/tactician-container",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/tactician-container.git",
+                "reference": "d1a5d884e072b8cafbff802d07766076eb2ffcb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/tactician-container/zipball/d1a5d884e072b8cafbff802d07766076eb2ffcb0",
+                "reference": "d1a5d884e072b8cafbff802d07766076eb2ffcb0",
+                "shasum": ""
+            },
+            "require": {
+                "league/tactician": "^1.0",
+                "php": ">=5.5",
+                "psr/container": "^1.0"
+            },
+            "require-dev": {
+                "league/container": "~2.3",
+                "phpunit/phpunit": "~4.3",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\Tactician\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nigel Greenway",
+                    "homepage": "http://futurepixels.co.uk"
+                }
+            ],
+            "description": "Tactician integration for any container implementing PSR-11",
+            "keywords": [
+                "container",
+                "container-interop",
+                "di",
+                "interoperable",
+                "league",
+                "tactician"
+            ],
+            "time": "2017-04-13T06:27:12+00:00"
+        },
+        {
+            "name": "league/tactician-logger",
+            "version": "v0.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/tactician-logger.git",
+                "reference": "3ff9ee04e4cbec100af827f829ed4c7ff7c08442"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/tactician-logger/zipball/3ff9ee04e4cbec100af827f829ed4c7ff7c08442",
+                "reference": "3ff9ee04e4cbec100af827f829ed4c7ff7c08442",
+                "shasum": ""
+            },
+            "require": {
+                "league/tactician": "^1.0",
+                "php": ">=5.5.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9",
+                "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\Tactician\\Logger\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ross Tuck"
+                }
+            ],
+            "description": "Adds PSR-3 logging support to the Tactician command bus",
+            "homepage": "https://github.com/thephpleague/tactician-logger",
+            "keywords": [
+                "log",
+                "logging",
+                "tactician"
+            ],
+            "time": "2016-08-23T05:50:38+00:00"
         },
         {
             "name": "linecorp/line-bot-sdk",
@@ -813,32 +920,32 @@
         },
         {
             "name": "symfony/config",
-            "version": "3.4.x-dev",
+            "version": "4.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "24a60c0d7ad98a0fa5d1f892e9286095a389404f"
+                "reference": "4430cd5d92f78bfe190ca54af93e0d1564b17e8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/24a60c0d7ad98a0fa5d1f892e9286095a389404f",
-                "reference": "24a60c0d7ad98a0fa5d1f892e9286095a389404f",
+                "url": "https://api.github.com/repos/symfony/config/zipball/4430cd5d92f78bfe190ca54af93e0d1564b17e8f",
+                "reference": "4430cd5d92f78bfe190ca54af93e0d1564b17e8f",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/filesystem": "~2.8|~3.0|~4.0",
+                "php": "^7.1.3",
+                "symfony/filesystem": "^3.4|^4.0|^5.0",
                 "symfony/polyfill-ctype": "~1.8"
             },
             "conflict": {
-                "symfony/dependency-injection": "<3.3",
-                "symfony/finder": "<3.3"
+                "symfony/finder": "<3.4"
             },
             "require-dev": {
-                "symfony/dependency-injection": "~3.3|~4.0",
-                "symfony/event-dispatcher": "~3.3|~4.0",
-                "symfony/finder": "~3.3|~4.0",
-                "symfony/yaml": "~3.0|~4.0"
+                "symfony/event-dispatcher": "^3.4|^4.0|^5.0",
+                "symfony/finder": "^3.4|^4.0|^5.0",
+                "symfony/messenger": "^4.1|^5.0",
+                "symfony/service-contracts": "^1.1",
+                "symfony/yaml": "^3.4|^4.0|^5.0"
             },
             "suggest": {
                 "symfony/yaml": "To use the yaml reference dumper"
@@ -846,7 +953,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -873,7 +980,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-26T07:52:57+00:00"
+            "time": "2019-08-26T09:00:56+00:00"
         },
         {
             "name": "symfony/debug",
@@ -933,35 +1040,37 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "3.4.x-dev",
+            "version": "4.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "2709bc2978ceb90f5180181f777f8a09125f2d89"
+                "reference": "85113f15002fa057a68554dd3d1e0b48e4e7bd51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/2709bc2978ceb90f5180181f777f8a09125f2d89",
-                "reference": "2709bc2978ceb90f5180181f777f8a09125f2d89",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/85113f15002fa057a68554dd3d1e0b48e4e7bd51",
+                "reference": "85113f15002fa057a68554dd3d1e0b48e4e7bd51",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "psr/container": "^1.0"
+                "php": "^7.1.3",
+                "psr/container": "^1.0",
+                "symfony/service-contracts": "^1.1.6"
             },
             "conflict": {
-                "symfony/config": "<3.3.7",
-                "symfony/finder": "<3.3",
+                "symfony/config": "<4.3",
+                "symfony/finder": "<3.4",
                 "symfony/proxy-manager-bridge": "<3.4",
                 "symfony/yaml": "<3.4"
             },
             "provide": {
-                "psr/container-implementation": "1.0"
+                "psr/container-implementation": "1.0",
+                "symfony/service-implementation": "1.0"
             },
             "require-dev": {
-                "symfony/config": "~3.3|~4.0",
-                "symfony/expression-language": "~2.8|~3.0|~4.0",
-                "symfony/yaml": "~3.4|~4.0"
+                "symfony/config": "^4.3|^5.0",
+                "symfony/expression-language": "^3.4|^4.0|^5.0",
+                "symfony/yaml": "^3.4|^4.0|^5.0"
             },
             "suggest": {
                 "symfony/config": "",
@@ -973,7 +1082,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -1000,7 +1109,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-26T16:07:57+00:00"
+            "time": "2019-08-26T16:27:46+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1132,26 +1241,26 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "4.4.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "a7b5a7f8e6805cfe0e183960acdf69e90b764494"
+                "reference": "e49326b068d62193ce81cb3ef1a499f0fda1d361"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/a7b5a7f8e6805cfe0e183960acdf69e90b764494",
-                "reference": "a7b5a7f8e6805cfe0e183960acdf69e90b764494",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/e49326b068d62193ce81cb3ef1a499f0fda1d361",
+                "reference": "e49326b068d62193ce81cb3ef1a499f0fda1d361",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
+                "php": "^7.2.9",
                 "symfony/polyfill-ctype": "~1.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.4-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -1178,7 +1287,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-21T15:14:41+00:00"
+            "time": "2019-08-21T15:37:45+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -1237,30 +1346,30 @@
         },
         {
             "name": "symfony/http-kernel",
-            "version": "3.4.x-dev",
+            "version": "4.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "43541540a4d839a3c9cea3769d2add2c0350e78a"
+                "reference": "e75e7ff97254d5bc3fbf9c76831dd3b47edb9df7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/43541540a4d839a3c9cea3769d2add2c0350e78a",
-                "reference": "43541540a4d839a3c9cea3769d2add2c0350e78a",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/e75e7ff97254d5bc3fbf9c76831dd3b47edb9df7",
+                "reference": "e75e7ff97254d5bc3fbf9c76831dd3b47edb9df7",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
+                "php": "^7.1.3",
                 "psr/log": "~1.0",
-                "symfony/debug": "^3.3.3|~4.0",
-                "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
+                "symfony/debug": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~3.4|~4.0",
                 "symfony/http-foundation": "~3.4.12|~4.0.12|^4.1.1",
                 "symfony/polyfill-ctype": "~1.8"
             },
             "conflict": {
-                "symfony/config": "<2.8",
+                "symfony/config": "<3.4",
                 "symfony/dependency-injection": "<3.4.10|<4.0.10,>=4",
-                "symfony/var-dumper": "<3.3",
+                "symfony/var-dumper": "<3.4",
                 "twig/twig": "<1.34|<2.4,>=2"
             },
             "provide": {
@@ -1268,34 +1377,32 @@
             },
             "require-dev": {
                 "psr/cache": "~1.0",
-                "symfony/browser-kit": "~2.8|~3.0|~4.0",
-                "symfony/class-loader": "~2.8|~3.0",
-                "symfony/config": "~2.8|~3.0|~4.0",
-                "symfony/console": "~2.8|~3.0|~4.0",
-                "symfony/css-selector": "~2.8|~3.0|~4.0",
+                "symfony/browser-kit": "~3.4|~4.0",
+                "symfony/config": "~3.4|~4.0",
+                "symfony/console": "~3.4|~4.0",
+                "symfony/css-selector": "~3.4|~4.0",
                 "symfony/dependency-injection": "^3.4.10|^4.0.10",
-                "symfony/dom-crawler": "~2.8|~3.0|~4.0",
-                "symfony/expression-language": "~2.8|~3.0|~4.0",
-                "symfony/finder": "~2.8|~3.0|~4.0",
-                "symfony/process": "~2.8|~3.0|~4.0",
+                "symfony/dom-crawler": "~3.4|~4.0",
+                "symfony/expression-language": "~3.4|~4.0",
+                "symfony/finder": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0",
                 "symfony/routing": "~3.4|~4.0",
-                "symfony/stopwatch": "~2.8|~3.0|~4.0",
-                "symfony/templating": "~2.8|~3.0|~4.0",
-                "symfony/translation": "~2.8|~3.0|~4.0",
-                "symfony/var-dumper": "~3.3|~4.0"
+                "symfony/stopwatch": "~3.4|~4.0",
+                "symfony/templating": "~3.4|~4.0",
+                "symfony/translation": "~3.4|~4.0",
+                "symfony/var-dumper": "~3.4|~4.0"
             },
             "suggest": {
                 "symfony/browser-kit": "",
                 "symfony/config": "",
                 "symfony/console": "",
                 "symfony/dependency-injection": "",
-                "symfony/finder": "",
                 "symfony/var-dumper": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -1322,7 +1429,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-26T16:46:48+00:00"
+            "time": "2018-12-06T17:29:37+00:00"
         },
         {
             "name": "symfony/inflector",
@@ -1746,6 +1853,64 @@
             "time": "2019-08-26T09:00:56+00:00"
         },
         {
+            "name": "symfony/service-contracts",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/service-contracts.git",
+                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
+                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "psr/container": "^1.0"
+            },
+            "suggest": {
+                "symfony/service-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Service\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to writing services",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2019-08-20T14:44:19+00:00"
+        },
+        {
             "name": "symfony/workflow",
             "version": "v4.3.0",
             "source": {
@@ -1817,27 +1982,27 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "3.4.x-dev",
+            "version": "4.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "3dc414b7db30695bae671a1d86013d03f4ae9834"
+                "reference": "dfa2c49cf5a070d8109dd85804a327442e63c878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/3dc414b7db30695bae671a1d86013d03f4ae9834",
-                "reference": "3dc414b7db30695bae671a1d86013d03f4ae9834",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/dfa2c49cf5a070d8109dd85804a327442e63c878",
+                "reference": "dfa2c49cf5a070d8109dd85804a327442e63c878",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
+                "php": "^7.1.3",
                 "symfony/polyfill-ctype": "~1.8"
             },
             "conflict": {
                 "symfony/console": "<3.4"
             },
             "require-dev": {
-                "symfony/console": "~3.4|~4.0"
+                "symfony/console": "^3.4|^4.0|^5.0"
             },
             "suggest": {
                 "symfony/console": "For validating YAML files using the lint command"
@@ -1845,7 +2010,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -1872,7 +2037,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-20T13:31:17+00:00"
+            "time": "2019-08-21T15:14:41+00:00"
         }
     ],
     "packages-dev": [
@@ -3312,64 +3477,6 @@
             "time": "2019-08-26T09:00:56+00:00"
         },
         {
-            "name": "symfony/service-contracts",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
-                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "psr/container": "^1.0"
-            },
-            "suggest": {
-                "symfony/service-implementation": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Contracts\\Service\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Generic abstractions related to writing services",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "abstractions",
-                "contracts",
-                "decoupling",
-                "interfaces",
-                "interoperability",
-                "standards"
-            ],
-            "time": "2019-08-20T14:44:19+00:00"
-        },
-        {
             "name": "symfony/var-dumper",
             "version": "3.4.x-dev",
             "source": {
@@ -3492,6 +3599,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "league/tactician-bundle": 20,
         "phpspec/phpspec": 20
     },
     "prefer-stable": false,
