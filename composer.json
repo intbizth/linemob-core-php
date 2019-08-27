@@ -36,15 +36,15 @@
         "php-http/client-implementation": "^1.0",
         "php-http/httplug": "^1.0",
         "php-http/discovery": "^1.0",
-        "symfony/workflow": "^3.3"
+        "symfony/workflow": "^5.0@dev"
     },
     "require-dev": {
-        "phpspec/phpspec": "^3.0",
         "php-http/guzzle6-adapter": "^1.1",
         "symfony/var-dumper": "^3.3",
         "doctrine/instantiator": "1.0.5",
         "doctrine/orm": "^2.5",
-        "doctrine/common": "^2.8"
+        "doctrine/common": "^2.8",
+        "phpspec/phpspec": "^6.0@dev"
     },
     "config": {
         "bin-dir": "bin"
