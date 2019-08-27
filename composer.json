@@ -39,7 +39,7 @@
         "league/tactician-bundle": "^1.0@dev"
     },
     "require-dev": {
-        "php-http/guzzle6-adapter": "1.1.1",
+        "php-http/guzzle6-adapter": "^1.0",
         "symfony/var-dumper": "^3.3",
         "doctrine/instantiator": "1.0.5",
         "doctrine/orm": "^2.5",
