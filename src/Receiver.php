@@ -87,7 +87,7 @@ class Receiver
      *
      * @return Input
      */
-    private function captureInput(array $eventData)
+    public function captureInput(array $eventData)
     {
         $inputData = [
             'text' => FallbackCommand::CMD,
